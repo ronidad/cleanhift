@@ -6,17 +6,12 @@
 
    <table>
     <tr>
-    <td><base-card>Projects</base-card></td>
-    <td><base-card>plots</base-card></td>
-    <td><base-card>sales people</base-card></td>
-    <td><base-card>clients</base-card></td>
+    <td><base-card>55 clients registered</base-card></td>
+    <td><base-card>10 courts served</base-card></td>
+    <td><base-card>10,000 Collected</base-card></td>
+    <td><base-card>7 months in operation</base-card></td>
     </tr>
-    <tr>
-    <td><base-card>Invoices</base-card></td>
-    <td><base-card>Revenues</base-card></td>
-    <td><base-card>Expenditures</base-card></td>
-    <td><base-card>Income</base-card></td>
-    </tr>
+  
 
    </table>
   

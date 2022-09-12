@@ -227,6 +227,7 @@ const store = createStore({
     clientPaymentGetter: (state) => (client)=>state.clientpaymentz.filter(pay=>pay.client_id==client),
     PaymentGetter: (state) => (client)=>state.payments.filter(pay=>pay.client_id==client),
     clientName: (state) => (client)=> state.clients.filter(pay=>pay.client_id==client),
+    
     // clientName: (state) => (client)=> state.clients.filter(pay=pay.client_id=client)
 
   },

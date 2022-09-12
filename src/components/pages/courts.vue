@@ -12,7 +12,7 @@
                 <tr v-for="court in courts" :key="court.id">
                     <td>{{ court.name}}</td>
                     <td>{{ court.area}}</td>
-                    <td>{{ court.reg_date}}</td>
+                    <td>{{new Date(court.reg_date).toLocaleString('nl-NL') }}</td>
                     
                 </tr>
             </tbody>

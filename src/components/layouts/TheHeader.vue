@@ -1,18 +1,22 @@
 <template>
-<div class="theader">
-    <header>
-    <nav>
-      <h1><router-link to="/">Roberms</router-link></h1>
+  <!-- <side-bar></side-bar>   -->
+  
+  <div class="wrapper">
+    
+    <div class="main_content">
+      <div class="header">
+        <nav>
+      <h3> <router-link to="#">welcome {{user.name}}</router-link></h3>
       <ul> 
         <li v-if="isLoggedIn">
-          <router-link to="/profile">profile</router-link>
+          <router-link to="/dashboard">Dashboard</router-link>
         </li>
         <li v-else>
           <router-link to="/register">signup</router-link>
           <router-link to="/login">login</router-link>
         </li>
         <li v-if="isLoggedIn">
-          <base-button @click="handleLogout">logout</base-button>
+          <button @click="handleLogout">logout</button>
        </li>
         <!-- <li v-if="isLoggedIn">
           <router-link to="/register">sign Uo</router-link>
@@ -24,7 +28,14 @@
         </li> -->
       </ul>
     </nav>
-  </header>
+        <!-- <router-link>logout</router-link> -->
+      </div>
+      <div class="main_content">
+        <div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 <script>
@@ -44,58 +55,97 @@ export default {
       this.$router.push('/login')
 
     }
-  }
+  },
+  data(){
+          return {
+               user: ""
+          }
+     },
+     mounted(){
+          let user = localStorage.getItem('user')
+          this.user = JSON.parse(user)
+     },
 }
 </script>
+<style scoped >
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
-<style scoped>
-header {
-  width: 100%;
-  height: 4rem;
-  background-color: #05055f;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-header a {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
   text-decoration: none;
-  color: #f391e3;
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border: 1px solid transparent;
+  font-family: 'Josefin Sans', sans-serif;;
+}
+body {
+  background: #fdfbfb;
+  margin-left: 0px;
+}
+.wrapper {
+  display: flex;
+  position: relative;
 }
 
-a:active,
-a:hover,
-a.router-link-active {
-  border: 1px solid #f391e3;
-}
+.wrapper .sidebar {
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  background: rgb(35, 48, 66);
+  padding: 30px 0;
 
-h1 {
-  margin: 0;
 }
-
-h1 a {
-  color: white;
-  margin: 0;
+.wrapper .sidebar h2 {
+  color: #ffff;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
 }
-
-h1 a:hover,
-h1 a:active,
-h1 a.router-link-active {
-  border-color: transparent;
+.wrapper .sidebar ul li {
+  padding: 2px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.05);
+   border-top: 1px solid rgb(225, 225, 225, 0.05);
 }
-
-header nav {
+.wrapper .sidebar ul li a {
+  color: #bdb8d7;
+  display: block;
+}
+.wrapper .sidebar ul li .fas {
+  width: 25px;
+}
+.wrapper .sidebar ul li :hover {
+  background: #594f8d;
+}
+.wrapper .sidebar ul li :hover a {
+  color: #ffff;
+}
+.wrapper .main_content {
+  width: 100%;
+  margin-left: -20px;
+  margin-top: 20px;
+  
+   
+}
+.wrapper .main_content .header {
+  /* padding: 20px; */
+  background: rgba(249, 251, 252, 0.973);
+  color: #717171;
+  border-bottom: 1px solid #e0e4e8;
+  height: 3rem;
+  width: 101%;
+  margin-top: -15px;
+  
+  
+ 
+}
+.header nav {
   width: 90%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-header ul {
+.header ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -103,8 +153,29 @@ header ul {
   justify-content: center;
   align-items: center;
 }
-
-li {
-  margin: 0 0.5rem;
+.header a {
+  text-decoration: none;
+  
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
 }
+
+
+table, th, td {
+  border: 1px solid;
+  padding: 7px;
+}
+table {
+  width: 90%;
+   border: 1px solid;
+   border-collapse: collapse;
+   
+  
+}
+table, tr {
+    color: #717171;
+}
+/* tr:hover {background-color: #717070;} */
+
 </style>

@@ -10,8 +10,11 @@
             </tr>
             </thead> 
             <tbody>
+                
                 <tr v-for="client in clients" :key="client.id">
-                    <td>{{ client.name}}</td> 
+                    <td><a :href="'/client/payments/' + client.client_id">{{client.name}}</a></td>
+                    
+                    <!-- <td>{{ client.name}}</td>  -->
                     <td>{{ client.phone}}</td>
                     <td>{{ client.court}}</td>
                     
@@ -32,6 +35,10 @@ export default {
             return  this.$store.getters.clients
 
             
+        },
+        id_client(){
+            return this.client_id + 1
+
         }
 
     },
