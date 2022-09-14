@@ -25,6 +25,25 @@
       <label for="amount"> Amount </label>
       <input type="text" id="amount" v-model="formData.amount" />
     </div>
+    <div class="form-control">
+    <div class="field">
+        <label class="label">payment type</label>
+        <div class="select">
+          
+          <select v-model="formData.type">
+            
+  <option>MPESA</option>
+  <option>CASH</option>
+  <option>CHEQUE</option>
+</select>
+        </div>
+      </div>
+      </div>
+
+      <div class="form-control">
+      <label for="amount"> Reference </label>
+      <input type="text" id="ref" v-model="formData.reference" />
+    </div>
      
      
     
@@ -47,6 +66,9 @@ export default {
         formData: {
             name: '',
             amount: '',
+            type: '',
+            ref: ''
+
             
             
             

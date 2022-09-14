@@ -208,6 +208,8 @@ const store = createStore({
           name: responseData[key].name,
           amount: responseData[key].amount,
           date: responseData[key].payment_date,
+          type: responseData[key].type,
+          reference: responseData[key].reference,
         };
         payments.push(payment);
       }

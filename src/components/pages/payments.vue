@@ -8,6 +8,8 @@
                 <th><h3>Name</h3></th>
                 <th><h3>amount</h3></th>
                 <th><h3>Payment date</h3></th>
+                <th><h3>Payment type</h3></th>
+                <th><h3>Reference</h3></th>
             </tr>
             </thead> 
             <tbody>
@@ -16,6 +18,8 @@
                     <td>{{ payment.name}}</td>
                     <td>{{ payment.amount}}</td>
                     <td>{{ new Date(payment.date).toLocaleString('nl-NL') }}</td>
+                    <td>{{ payment.type}}</td>
+                    <td>{{ payment.reference}}</td>
                     
                 </tr>
             </tbody>
