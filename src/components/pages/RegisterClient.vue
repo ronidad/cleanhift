@@ -85,7 +85,7 @@ export default {
     // },
   methods: {
     async createClient(){
-      const response = await axios.post("http://localhost:5000/client/registration/", this.formData)
+      const response = await axios.post("http://172.105.101.77:5000/client/registration/", this.formData)
       console.log(response)
    
         this.$router.replace('/clients');
