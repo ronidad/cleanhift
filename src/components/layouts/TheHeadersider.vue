@@ -80,9 +80,7 @@ export default {
      },
 }
 </script>
-<style>
-
-
+<style >
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
 * {

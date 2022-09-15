@@ -152,6 +152,10 @@ export default {
 </script>
 
 <style scoped>
+  body {
+  background: #fdfbfb;
+  margin-left: 220px;
+}
 ul {
   list-style: none;
   margin: 0;

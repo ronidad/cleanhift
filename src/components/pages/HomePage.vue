@@ -1,283 +1,295 @@
 <template>
-  <the-header></the-header>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Clean.Shift</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- normalize css -->
+      <!-- <link rel = "stylesheet" href = "resources/normalize.css"> -->
+      <!-- font -->
+      <!-- <link rel = "stylesheet" href = "resources/font.css"> -->
+      <!-- font awesome cdn -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+      <!-- magnific popup -->
+      <link rel = "stylesheet" href = "resources/Magnific-Popup-master/dist/magnific-popup.css">
+      <!-- owl carousel -->
+      <link rel = "stylesheet" href = "resources/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css">
+      <link rel = "stylesheet" href = "resources/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
+      <!-- animate css -->
+      <!-- <link rel = "stylesheet" href = "resources/animate.css-main/animate.css"> -->
+      <!-- custom (main) css -->
+      <!-- <link rel="stylesheet" href="css/main.css"> -->
+    </head>
+  
+   
+          <!-- header -->
+          <header class = "header" id = "intro">
+        <nav class = "navbar">
+          <div class = "container">
+            <div class = "brand-and-toggler">
+              <a href = "/" class = "navbar-brand">
+                Clean<span></span>Shift
+              </a>
+              <button type = "button" class = "navbar-toggler" id = "navbar-toggler">
+                <i class = "fas fa-bars"></i>
+              </button>
+            </div>
+  
+            <div class = "navbar-collapse">
+              <ul class = "navbar-nav">
+                <li class = "nav-item">
+                  <a href = "#intro" class = "nav-link">intro</a>
+                </li>
+                <li class = "nav-item">
+                  <a href = "#feature" class = "nav-link">feature</a>
+                </li>
+                <li class = "nav-item">
+                  <a href = "#team" class = "nav-link">team</a>
+                </li>
+                <li class = "nav-item">
+                  <a href = "#pricing" class = "nav-link">pricing</a>
+                </li>
+                <li class = "nav-item">
+                  <a href = "#testimonial" class = "nav-link">testimonial</a>
+                </li>
+                <li class = "nav-item">
+                  <a href = "dashboard" class = "nav-link">Admin</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+  
+        <div class = "hero-div center container">
+          <h1>we collect litter in your compound</h1>
+          <p class = "animate__animated animate__fadeInUp animate__slow">Give us the work to clean your compound. We collect weekly on saturdays throught the courts using our trucks</p>
+  
+          <div class = "hero-btns animate__animated animate__fadeInUp animate__slow">
+            <button type = "button" class = "btn-trans">learn more</button>
+            
+            <button  type = "button" class = "btn-white">Manage</button>
+          </div>
+        </div>
+      </header>
   
   
-  <center><h2>Welcome to clean shift</h2></center>
-  
-    
-    
-  
-    
     
   </template>
-<script>
-// const user = null;
-// import axios from 'axios'
-// import { mapGetters } from "vuex";
-export default {
-  computed: {
-    isLoggedIn() {
-      return this.$store.getters.isLoggedIn;
-    },
-  },
-
-  methods: {
-    handleLogout() {
-      this.$store.dispatch("clearToken");
-      localStorage.removeItem("token"); // clear your user's token from localstorage
-      localStorage.removeItem("user"); // clear your user from localstorage
-
-      this.$router.push("/login");
-    },
-  },
-  data() {
-    return {
-      user: "",
-    };
-  },
-  mounted() {
-    let user = localStorage.getItem("user");
-    this.user = JSON.parse(user);
-  },
-  created() {
-    // if (localStorage.user) {
-    //      this.user = localStorage.getItem('user');
-    //      console.log(user)
-    // }
-    // const response = await localStorage.getItem('user');
-    // console.log(response)
-  },
-};
-</script>
-
-<style scoped>
-@keyframes tonext {
-  75% {
-    left: 0;
+  
+  <style scoped>
+  :root{
+      --mount-meadow: #1bbc9c;
+      --white-smoke: #f0f0f0;
+      --night-rider: #343434;
+      --black: #191b17;
+      --transition: all 0.5s ease-in-out;
   }
-  95% {
-    left: 100%;
+  *{
+      font-family: 'Hind Siliguri', sans-serif;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
   }
-  98% {
-    left: 100%;
+  html{
+      color: var(--black);
+      font-size: 1rem;
+      font-weight: 300;
+      line-height: 1.5;
+      text-rendering: optimizeLegibility;
+      scroll-behavior: smooth;
   }
-  99% {
-    left: 0;
+  body {
+    background: #1bbdee;
+    margin-left: -200px !important;
+    position: fixed;
+    background: transparent;
   }
-}
-
-@keyframes tostart {
-  75% {
-    left: 0;
+  img{
+      width: 100%;
   }
-  95% {
-    left: -300%;
+  a{
+      text-decoration: none;
+      color: var(--black);
   }
-  98% {
-    left: -300%;
+  li{
+      list-style-type: none;
   }
-  99% {
-    left: 0;
+  button{
+      cursor: pointer;
+      outline: 0;
+      background: transparent;
   }
-}
-
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
+  .container{
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1rem;
   }
-  97% {
-    scroll-snap-align: none;
+  h1, h2, h3, h4, h5, h6{
+      margin: 0.6rem 0;
+      line-height: 1.25;
+      font-weight: 400;
+      text-transform: capitalize;
   }
-  99% {
-    scroll-snap-align: none;
+  
+  .center{
+      display: flex;
+      justify-content: center;
+      align-items: left;
   }
-  100% {
-    scroll-snap-align: center;
+  
+  /* Headers */
+  .header{
+      background-image:  url(/assets/header-bg.jpg);
+      min-height: 100vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: rgb(15, 179, 165);
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
   }
-}
-
-body {
-  max-width: 37.5rem;
-  margin: 0 auto;
-  padding: 0 1.25rem;
-  font-family: "Lato", sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
-  border: none;
-}
-
-* {
-  -ms-overflow-style: none;
-}
-
-ol,
-li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.carousel {
-  position: -ms-page;
-  padding-top: 50%;
-  filter: drop-shadow(10 10 -2px #0003);
-  perspective: 100%;
-}
-
-.carousel__viewport {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  overflow-x: scroll;
-  counter-reset: item;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-}
-
-.carousel__slide {
-  position: relative;
-  flex: 0 0 100%;
-  width: 100%;
-  background-color: #f99;
-  counter-increment: item;
-}
-
-.carousel__slide:nth-child(even) {
-  background-color: #99f;
-}
-
-.carousel__slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -40%, 70px);
-  color: #fff;
-  font-size: 2em;
-}
-
-.carousel__snapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: center;
-}
-
-@media (hover: hover) {
-  .carousel__snapper {
-    animation-name: tonext, snap;
-    animation-timing-function: ease;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
+  .navbar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgb(107, 241, 168);
+      z-index: 999;
   }
-
-  .carousel__slide:last-child .carousel__snapper {
-    animation-name: tostart, snap;
+  .brand-and-toggler{
+      font-size: 1.65rem;
+      padding: 0.8rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .carousel__snapper {
-    animation-name: none;
+  .navbar-brand{
+      font-weight: 500;
+      color: var(--night-rider);
   }
-}
-
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-
-.carousel__navigation {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  text-align: center;
-}
-
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
-}
-
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: 0.25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform 0.1s;
-}
-
-.carousel::before,
-.carousel::after,
-.carousel__prev,
-.carousel__next {
-  position: absolute;
-  top: 0;
-  margin-top: 37.5%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  font-size: 0;
-  outline: 0;
-}
-
-.carousel::before,
-.carousel__prev {
-  left: -1rem;
-}
-
-.carousel::after,
-.carousel__next {
-  right: -1rem;
-}
-
-.carousel::before,
-.carousel::after {
-  content: "";
-  z-index: 1;
-  background-color: #333;
-  background-size: 1.5rem 1.5rem;
-  background-repeat: no-repeat;
-  background-position: center center;
-  color: #fff;
-  font-size: 2.5rem;
-  line-height: 4rem;
-  text-align: center;
-  pointer-events: none;
-}
-
-.carousel::before {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-
-.carousel::after {
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
-}
-</style>
+  .navbar-brand span{
+      color: var(--mount-meadow);
+  }
+  .navbar-toggler{
+      border: none;
+      color: var(--mount-meadow);
+  }
+  .navbar-nav{
+      margin: 0.2rem 0 0.6rem 0;
+  }
+  .nav-item{
+      padding: 0.6rem 0;
+  }
+  .nav-link{
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 1.5px;
+      font-weight: 400;
+      opacity: 0.65;
+      transition: var(--transition);
+  }
+  .nav-link:hover{
+      color: var(--mount-meadow)!important;
+  }
+  .navbar-collapse{
+      display: none;
+  }
+  .hero-div{
+      flex: 1;
+      flex-direction: column;
+      text-align: center;
+  }
+  .hero-div h1{
+      font-size: 2.55rem;
+      padding-bottom: 0.4rem;
+  }
+  .hero-div p{
+      color: var(--white-smoke);
+      font-size: 1.05rem;
+      letter-spacing: 3px;
+  }
+  .hero-btns{
+      margin-top: 2.8rem;
+  }
+  .hero-btns button{
+      border: 3.5px solid #fff;
+      border-radius: 2rem;
+      padding: 0.8rem 2rem;
+      text-transform: uppercase;
+  }
+  .btn-trans{
+      color: #fff;
+      transition: var(--transition);
+      display: none;
+  }
+  .btn-trans:hover{
+      background: var(--mount-meadow);
+      border-color: var(--mount-meadow);
+  }
+  .btn-white{
+      background: #fff;
+      color: var(--night-rider);
+      transition: var(--transition);
+  }
+  .btn-white:hover{
+      background: transparent;
+      color: #fff;
+  }
+  
+  @media screen and (min-width: 992px){
+      .navbar{
+          background: transparent;
+          margin-top: 1.4rem;
+          height: 60px;
+      }
+      .navbar .container{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+      }
+      .navbar-brand{
+          color: var(--white-smoke);
+          font-size: 2rem;
+      }
+      .navbar-toggler{
+          display: none;
+      }
+      .navbar-collapse{
+          display: block!important;
+      }
+      .navbar-nav{
+          display: flex;
+          margin: 0;
+      }
+      .nav-item{
+          margin-left: 1.8rem;
+      }
+      .nav-link{
+          color: var(--white-smoke);
+      }
+      .hero-div h1{
+          font-size: 3.8rem;
+      }
+      .btn-trans{
+          display: inline-block;
+          margin-right: 0.8rem;
+      }
+      .navbar{
+          -webkit-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+          -moz-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+          box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+          margin-top: 0;
+          background: rgb(63, 79, 82);
+      }
+      .navbar .navbar-brand{
+          color: var(--night-rider);
+      }
+      .navbar .nav-link{
+          color: var(--night-rider);
+      }
+  
+    }
+  </style>
