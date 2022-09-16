@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     async loginUser(){
-      const response = await axios.post("http://localhost:5000/login", this.formData)
+      const response = await axios.post("http://172.105.101.77:5000/login", this.formData)
        
       let user = response.data.user
       console.log(user)
