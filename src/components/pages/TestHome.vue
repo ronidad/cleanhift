@@ -1,779 +1,314 @@
-
-
-
-
 <template>
-  <body>
-          
-    
-   <header class="header" id="intro">
-      <nav class="navbar">
-          <div class="container">
-              <div class="brand-and-toggler">
-                  <a href="/" class="nav-brand">
-                      Clean <span></span> Shift
-  
-                  </a>
-                  <button type="button" class="nav-bar-toggler" id="nav-bar-toggler">
-                      <i class="fas fa-bars"></i>
-                  </button>
-  
-              </div>
-              <div class="navbar-collapse">
-                  <ul class="navbar-nav">
-                      <li class="nav-item">
-                          <a href="#intro" class="nav-link">Intro</a>
-  
-                      </li>
-                      <li class="nav-item">
-                          <a href="#Home" class="nav-link">Home</a>
-  
-                      </li>
-                      <li class="nav-item">
-                          <a href="#courts" class="nav-link">Courts</a>
-  
-                      </li>
-                      <li class="nav-item">
-                          <a href="#Pricing" class="nav-link">Pricing</a>
-  
-                      </li>
-                      <li class="nav-item">
-                          <a href="#Contacts" class="nav-link">Contact us</a>
-  
-                      </li>
-  
-                  </ul>
-              </div>
-          </div>
-      </nav>
-      
-  
-  
-  
-   </header>
-  
-   <div class="hero.div center container">
-          <h1>Cleanshift waste management system</h1>
-          <p>Lets clean your compound in Katani, syokimau and Utawala</p>
-  
-          <div class="hero.btns">
-              <button type="button" class="btn-trans"> Learn more</button>
-              <button type="button" class="btn-white"> admin? Sign in</button>
-  
-  
-          </div>
-  
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Clean.Shift</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- normalize css -->
+    <!-- <link rel = "stylesheet" href = "resources/normalize.css"> -->
+    <!-- font -->
+    <!-- <link rel = "stylesheet" href = "resources/font.css"> -->
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <!-- magnific popup -->
+    <link
+      rel="stylesheet"
+      href="resources/Magnific-Popup-master/dist/magnific-popup.css"
+    />
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="resources/OwlCarousel2-2.3.4/dist/assets/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="resources/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css"
+    />
+    <!-- animate css -->
+    <!-- <link rel = "stylesheet" href = "resources/animate.css-main/animate.css"> -->
+    <!-- custom (main) css -->
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+  </head>
+
+  <!-- header -->
+  <header class="header" id="intro">
+    <nav class="navbar">
+      <div class="container">
+        <div class="brand-and-toggler">
+          <a href="/" class="navbar-brand"> Clean<span></span>Shift </a>
+          <button type="button" class="navbar-toggler" id="navbar-toggler">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#intro" class="nav-link">intro</a>
+            </li>
+            <li class="nav-item">
+              <a href="#feature" class="nav-link">feature</a>
+            </li>
+            <li class="nav-item">
+              <a href="#team" class="nav-link">team</a>
+            </li>
+            <li class="nav-item">
+              <a href="#pricing" class="nav-link">pricing</a>
+            </li>
+            <li class="nav-item">
+              <a href="#testimonial" class="nav-link">testimonial</a>
+            </li>
+            <li class="nav-item">
+              <a href="dashboard" class="nav-link">Admin</a>
+            </li>
+          </ul>
+        </div>
       </div>
-  </body>
-    
-      
-      
-    
-      
-      
-  </template>
-  <script>
-  // const user = null;
-  // import axios from 'axios'
-  // import { mapGetters } from "vuex";
-  export default {
-    computed: {
-      isLoggedIn() {
-        return this.$store.getters.isLoggedIn;
-      },
-    },
-  
-    methods: {
-      handleLogout() {
-        this.$store.dispatch("clearToken");
-        localStorage.removeItem("token"); // clear your user's token from localstorage
-        localStorage.removeItem("user"); // clear your user from localstorage
-  
-        this.$router.push("/login");
-      },
-    },
-    data() {
-      return {
-        user: "",
-      };
-    },
-    mounted() {
-      let user = localStorage.getItem("user");
-      this.user = JSON.parse(user);
-    },
-    created() {
-      // if (localStorage.user) {
-      //      this.user = localStorage.getItem('user');
-      //      console.log(user)
-      // }
-      // const response = await localStorage.getItem('user');
-      // console.log(response)
-    },
-  };
-  </script>
-  
-  <style scoped>
-  :root{
-      --mount-meadow: #1bbc9c;
-      --white-smoke: #f0f0f0;
-      --night-rider: #343434;
-      --black: #191b17;
-      --transition: all 0.5s ease-in-out;
-  }
-  *{
-      font-family: 'Hind Siliguri', sans-serif;
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
-  }
-  html{
-      color: var(--black);
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.5;
-      text-rendering: optimizeLegibility;
-      scroll-behavior: smooth;
-  }
-  
-  /* setup & reusable stylings */
-  img{
-      width: 100%;
-  }
-  a{
-      text-decoration: none;
-      color: var(--black);
-  }
-  li{
-      list-style-type: none;
-  }
-  button{
-      cursor: pointer;
-      outline: 0;
-      background: transparent;
-  }
-  .container{
-      max-width: 1320px;
-      margin: 0 auto;
-      padding: 0 1rem;
-  }
-  h1, h2, h3, h4, h5, h6{
-      margin: 0.6rem 0;
-      line-height: 1.25;
-      font-weight: 400;
-      text-transform: capitalize;
-  }
-  .text{
-      margin: 0.6rem 0;
-      opacity: 0.8;
-  }
-  .center{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
-  section{
-      padding: 6.5rem 0;
-  }
-  .title{
-      padding: 0.6rem 0;
-      text-align: center;
-  }
-  .title h2{
-      font-size: 2.2rem;
-      color: var(--night-rider);
-  }
-  .title .text{
-      font-weight: 500;
-      font-size: 1.1rem;
-  }
-  
-  /* header */
-  .header{
-      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
-      min-height: 100vh;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
-  }
-  .navbar{
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #fff;
-      z-index: 999;
-  }
-  .brand-and-toggler{
-      font-size: 1.65rem;
-      padding: 0.8rem 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  .navbar-brand{
-      font-weight: 500;
-      color: var(--night-rider);
-  }
-  .navbar-brand span{
-      color: var(--mount-meadow);
-  }
-  .navbar-toggler{
-      border: none;
-      color: var(--mount-meadow);
-  }
-  .navbar-nav{
-      margin: 0.2rem 0 0.6rem 0;
-  }
-  .nav-item{
-      padding: 0.6rem 0;
-  }
-  .nav-link{
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      letter-spacing: 1.5px;
-      font-weight: 400;
-      opacity: 0.65;
-      transition: var(--transition);
-  }
-  .nav-link:hover{
-      color: var(--mount-meadow)!important;
-  }
-  .navbar-collapse{
-      display: none;
-  }
-  .hero-div{
-      flex: 1;
-      flex-direction: column;
-      text-align: center;
-  }
-  .hero-div h1{
-      font-size: 2.55rem;
-      padding-bottom: 0.4rem;
-  }
-  .hero-div p{
-      color: var(--white-smoke);
-      font-size: 1.05rem;
-      letter-spacing: 3px;
-  }
-  .hero-btns{
-      margin-top: 2.8rem;
-  }
-  .hero-btns button{
-      border: 3.5px solid #fff;
-      border-radius: 2rem;
-      padding: 0.8rem 2rem;
-      text-transform: uppercase;
-  }
-  .btn-trans{
-      color: #fff;
-      transition: var(--transition);
-      display: none;
-  }
-  .btn-trans:hover{
-      background: var(--mount-meadow);
-      border-color: var(--mount-meadow);
-  }
-  .btn-white{
-      background: #fff;
-      color: var(--night-rider);
-      transition: var(--transition);
-  }
-  .btn-white:hover{
-      background: transparent;
-      color: #fff;
-  }
-  
-  /* detail */
-  .detail{
-      background: var(--white-smoke);
-  }
-  .detail-item{
-      background: #fff;
-      text-align: center;
-      box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
-      -webkit-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
-      -moz-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
-      margin: 2rem 0;
-      padding: 3.5rem 1.5rem;
-      border-radius: 4px;
-      transition: var(--transition);
-  }
-  .detail-item:hover{
-      -webkit-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
-      -moz-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
-      box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
-      transform: translateY(-5px);
-  }
-  .detail-item span{
-      font-size: 2.5rem;
-  }
-  .detail-item h2{
-      font-size: 1.4rem;
-      opacity: 0.8;
-      font-weight: 300;
-  }
-  .line{
-      width: 45px;
-      margin: 1.2rem auto;
-      background: var(--mount-meadow);
-      height: 2.5px;
-  }
-  /* feature */
-  .feature .title{
-      text-align: left;
-  }
-  .feature-left img{
-      width: 80%;
-      margin: 0 auto;
-  }
-  .feature-right{
-      margin-top: 4rem;
-  }
-  .feature-item{
-      margin: 1.4rem 0;
-      display: flex;
-  }
-  .feature-item div h3{
-      margin-top: 0;
-      font-size: 1.4rem;
-      font-weight: 300;
-      opacity: 0.85;
-  }
-  .feature-item span{
-      font-size: 1.1rem;
-      color: #fff;
-      background: var(--mount-meadow);
-      align-self: flex-start;
-      padding: 0.4rem 0.7rem;
-      border-radius: 2px;
-      margin-right: 1.4rem;
-  }
-  /* video */
-  .video{
-      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-      color: #fff;
-      text-align: center;
-  }
-  .video a{
-      font-size: 2.2rem;
-      color: #fff;
-      width: 65px;
-      height: 65px;
-      border-radius: 50%;
-      background-color: var(--mount-meadow);
-      padding-left: 7px;
-      margin: 0 auto;
-  }
-  .video h2{
-      font-size: 2rem;
-      color: var(--white-smoke);
-      padding: 1.2rem 0;
-  }
-  .video p{
-      font-size: 1.1rem;
-      letter-spacing: 1px;
-      color: var(--white-smoke);
-      opacity: 0.7;
-  }
-  
-  /* team */
-  .team .row{
-      margin-top: 2rem;
-  }
-  .team-item{
-      margin: 2rem 0;
-  }
-  .team-img{
-      position: relative;
-  }
-  .team-icons{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: flex;
-      background: var(--white-smoke);
-      opacity: 0;
-      transition: var(--transition);
-  }
-  .team-icons a{
-      color: var(--night-rider);
-      width: 50px;
-      height: 50px;
-      transition: var(--transition);
-  }
-  .team-icons a:hover{
-      background: var(--mount-meadow);
-      color: #fff;
-  }
-  .team-img:hover .team-icons{
-      opacity: 1;
-  }
-  .team-info{
-      text-align: center;
-      padding: 1.5rem;
-      line-height: 1;
-  }
-  .team-info h3{
-      font-size: 1.4rem;
-      color: var(--night-rider);
-  }
-  .team-info span{
-      font-size: 0.85rem;
-      letter-spacing: 1px;
-      font-weight: 500;
-      opacity: 0.7;
-  }
-  
-  /* FAQ */
-  .faq{
-      background: #f9f9f9;
-  }
-  .faq .row{
-      margin-top: 2rem;
-  }
-  .faq-item{
-      margin: 0.6rem 0;
-  }
-  .faq-head{
-      background: var(--white-smoke);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      padding: 0.2rem 1.8rem;
-  }
-  .faq-head h3{
-      font-weight: 300;
-      opacity: 0.8;
-  }
-  .faq-content{
-      background: #fff;
-      overflow: hidden;
-      height: 0;
-      padding: 0 1.8rem;
-      transition: var(--transition);
-  }
-  .show-faq-content{
-      height: 168px;
-      padding: 0.6rem 1.8rem;
-  }
-  
-  /* pricing */
-  .pricing .row{
-      margin-top: 2rem;
-  }
-  .pricing-item{
-      border: 2.5px solid #f9f9f9;
-      text-align: center;
-      padding: 3.4rem 0;
-      margin: 2rem 0;
-  }
-  .pricing-item h2{
-      color: var(--night-rider);
-      opacity: 0.7;
-      font-size: 1.5rem;
-  }
-  .pricing-item .price{
-      padding: 1.5rem 0 1rem 0;
-      line-height: 1.1;
-  }
-  .pricing-item .price span{
-      display: block;
-  }
-  .pricing-item .price span:first-child{
-      font-size: 2.6rem;
-      letter-spacing: 2px;
-      color: var(--mount-meadow);
-  }
-  .pricing-item .price span:last-child{
-      font-size: 0.85rem;
-      letter-spacing: 1;
-      font-weight: 500;
-  }
-  .pricing-item ul li{
-      padding: 0.8rem 0;
-      opacity: 0.7;
-  }
-  
-  /* testimonial */
-  .testimonial{
-      background-image: linear-gradient(rgba(27, 188, 156, 0.8), rgba(27, 188, 156, 0.9));
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-  }
-  .testimonial .title h2,
-  .testimonial .title{
-      color: #fff;
-  }
-  .testimonial .row{
-      margin-top: 2rem;
-  }
-  .testimonial-img{
-      border: 4px solid #fff;
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin: 2.5rem auto;
-      padding: 0.5rem;
-  }
-  .testimonial-img img{
-      border-radius: 50%;
-  }
-  .testimonial-item{
-      text-align: center;
-  }
-  .testimonial-item p{
-      font-size: 1.3rem;
-      color: var(--white-smoke);
-      line-height: 1.7;
-  }
-  .testimonial-item span{
-      margin-top: 0.7rem;
-      display: block;
-      font-size: 1.1rem;
-      color: #fff;
-      font-weight: 500;
-  }
-  
-  /* contact */
-  .contact .row{
-      margin-top: 2rem;
-  }
-  .contact .row > div{
-      margin: 2rem 0;
-      padding: 1rem 0;
-  }
-  .contact .row > div h2{
-      font-size: 1.4rem;
-      font-weight: 300;
-      opacity: 0.9;
-  }
-  .contact-left form input,
-  .contact-left form textarea{
-      width: 100%;
-      font-size: 1.1rem;
-      margin: 0.2rem 0;
-      padding: 0.8rem 0.6rem;
-      border: none;
-      border-bottom: 1.5px solid #f0f0f0;
-      outline: 0;
-  }
-  .contact-left form input::placeholder,
-  .contact-left form textarea::placeholder{
-      font-size: 1.1rem;
-      font-weight: 300;
-      opacity: 0.8;
-  }
-  .contact-left form input:focus,
-  .contact-left form textarea:focus{
-      border-color: var(--night-rider);
-  }
-  .submit-btn{
-      margin: 1rem 0;
-      border: none;
-      font-size: 1.3rem;
-      color: #fff;
-      background: var(--mount-meadow);
-      opacity: 0.9;
-      padding: 0.8rem 3.4rem;
-      border-radius: 2rem;
-      transition: var(--transition);
-  }
-  .submit-btn:hover{
-      background: var(--black);
-  }
-  .contact-right div{
-      margin: 2rem 0;
-  }
-  
-  /* footer */
-  .footer{
-      text-align: center;
-      background: var(--black);
-      color: var(--white-smoke);
-      padding: 2rem 0;
-      height: 50vh;
-  }
-  .footer .text{
-      opacity: 0.8;
-  }
-  .footer-links{
-      display: flex;
-      justify-content: center;
-      margin-top: 1.6rem;
-  }
-  .footer-links a{
-      color: var(--white-smoke);
-      opacity: 0.8;
-      width: 50px;
-      height: 50px;
-      margin: 0 0.2rem;
-      border-radius: 50%;
-      transition: var(--transition);
-  }
-  .footer-links a:hover{
-      background: var(--mount-meadow);
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* #### Media Queries #### */
-  
-  @media screen and (min-width: 768px){
-      .detail .row{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
-      }
-      .detail-item{
-          margin: 0;
-      }
-      .video h2{
-          font-size: 2.6rem;
-      }
-      .video p{
-          font-size: 1.2rem;
-          width: 75%;
-          margin: 0 auto;
-      }
-      .team-item{
-          margin: 0;
-      }
-      .faq .row{
-          width: 80%;
-          margin-left: auto;
-          margin-right: auto;
-      }
-      .pricing .row{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 2rem;
-      }
-      .pricing-item{
-          margin: 0;
-      }
-      .testimonial-item p{
-          width: 75%;
-          margin-left: auto;
-          margin-right: auto;
-      }
-      .contact .row{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          column-gap: 2rem;
-      }
-      .contact-right > div:first-child{
-          margin-top: 0;
-      }
-  }
-  
-  @media screen and (min-width: 992px){
-      .navbar{
-          background: transparent;
-          margin-top: 1.4rem;
-      }
-      .navbar .container{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-      }
-      .navbar-brand{
-          color: var(--white-smoke);
-          font-size: 2rem;
-      }
-      .navbar-toggler{
-          display: none;
-      }
-      .navbar-collapse{
-          display: block!important;
-      }
-      .navbar-nav{
-          display: flex;
-          margin: 0;
-      }
-      .nav-item{
-          margin-left: 1.8rem;
-      }
-      .nav-link{
-          color: var(--white-smoke);
-      }
-      .hero-div h1{
-          font-size: 3.8rem;
-      }
-      .btn-trans{
-          display: inline-block;
-          margin-right: 0.8rem;
-      }
-  
-      /* navbar change */
-      .cng-navbar{
-          -webkit-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
-          -moz-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
-          box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
-          margin-top: 0;
-          background: #fff;
-      }
-      .cng-navbar .navbar-brand{
-          color: var(--night-rider);
-      }
-      .cng-navbar .nav-link{
-          color: var(--night-rider);
-      }
-      .feature .row{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          align-items: center;
-          column-gap: 2rem;
-      }
-      .feature-right{
-          margin-top: 0;
-      }
-      .video p{
-          width: 60%;
-      }
-  }
-  
-  @media screen and (min-width: 1200px){
-      .hero-div h1{
-          width: 70%;
-          margin-left: auto;
-          margin-right: auto;
-      }
-      .detail .row{
-          grid-template-columns: repeat(3, 1fr);
-      }
-      .pricing .row{
-          grid-template-columns: repeat(3, 1fr);
-      }
-      .testimonial-item p{
-          width: 60%;
-      }
-      .contact .row{
-          column-gap: 4rem;
-      }
-      .contact-right{
-          padding-left: 4rem!important;
-      }
-  }
-  </style>
-  
+    </nav>
+    <!-- <div class="bodies"> -->
+
+    <div class="hero-div center container">
+      <h1>we collect litter in your compound</h1>
+      <p class="animate__animated animate__fadeInUp animate__slow">
+        Give us the work to clean your compound. We collect weekly on saturdays
+        throught the courts using our trucks
+      </p>
+
+      <div class="hero-btns animate__animated animate__fadeInUp animate__slow">
+        <button type="button" class="btn-trans">learn more</button>
+
+        <button type="button" class="btn-white">Manage</button>
+      </div>
+    </div>
+<!-- </div> -->
+  </header>
+</template>
+
+<style scoped>
+:root {
+  --mount-meadow: #1bbc9c;
+  --white-smoke: #f0f0f0;
+  --night-rider: #343434;
+  --black: #191b17;
+  --transition: all 0.5s ease-in-out;
+}
+* {
+  font-family: "Hind Siliguri", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+.bodies {
+  background: #1bbdee;
+  margin-left: -130px !important;
+  margin-top: 150px;
+  position: fixed;
+  background: transparent;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+li {
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+  outline: 0;
+  background: transparent;
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.6rem 0;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Headers */
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/assets/header-bg.jpg);
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(15, 179, 165);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin-left: -220px;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(107, 241, 168);
+  z-index: 999;
+}
+.brand-and-toggler {
+  font-size: 1.65rem;
+  padding: 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-brand {
+  font-weight: 500;
+  color: var(--night-rider);
+}
+.navbar-brand span {
+  color: var(--mount-meadow);
+}
+.navbar-toggler {
+  border: none;
+  color: var(--mount-meadow);
+}
+.navbar-nav {
+  margin: 0.2rem 0 0.6rem 0;
+}
+.nav-item {
+  padding: 0.6rem 0;
+}
+.nav-link {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  opacity: 0.65;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: var(--mount-meadow) !important;
+}
+.navbar-collapse {
+  display: none;
+}
+.hero-div {
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+}
+.hero-div h1 {
+  font-size: 2.55rem;
+  padding-bottom: 0.4rem;
+}
+.hero-div p {
+  color: var(--white-smoke);
+  font-size: 1.05rem;
+  letter-spacing: 3px;
+}
+.hero-btns {
+  margin-top: 2.8rem;
+}
+.hero-btns button {
+  border: 3.5px solid #fff;
+  border-radius: 2rem;
+  padding: 0.8rem 2rem;
+  text-transform: uppercase;
+}
+.btn-trans {
+  color: #fff;
+  transition: var(--transition);
+  display: none;
+}
+.btn-trans:hover {
+  background: var(--mount-meadow);
+  border-color: var(--mount-meadow);
+}
+.btn-white {
+  background: #fff;
+  color: var(--night-rider);
+  transition: var(--transition);
+}
+.btn-white:hover {
+  background: transparent;
+  color: #fff;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar {
+    background: transparent;
+    margin-top: 1.4rem;
+    height: 60px;
+  }
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar-brand {
+    color: var(--white-smoke);
+    font-size: 2rem;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .navbar-collapse {
+    display: block !important;
+  }
+  .navbar-nav {
+    display: flex;
+    margin: 0;
+  }
+  .nav-item {
+    margin-left: 1.8rem;
+  }
+  .nav-link {
+    color: var(--white-smoke);
+  }
+  .hero-div h1 {
+    font-size: 3.8rem;
+  }
+  .btn-trans {
+    display: inline-block;
+    margin-right: 0.8rem;
+  }
+  .navbar {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+    -moz-box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+    box-shadow: 0 2px 5px 0 rgba(207, 205, 207, 0.3);
+    margin-top: 0;
+    background: rgb(63, 79, 82);
+  }
+  .navbar .navbar-brand {
+    color: var(--night-rider);
+  }
+  .navbar .nav-link {
+    color: var(--night-rider);
+  }
+}
+</style>

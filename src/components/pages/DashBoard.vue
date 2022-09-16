@@ -21,6 +21,7 @@
 </script>
 
 <style scoped>
+
 .dashboard {
     background-color:azure;
     box-sizing: border-box;
