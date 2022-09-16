@@ -3,8 +3,8 @@
   
   <div class="wrapper">
     <div class="sidebar">
-      <h2>sidebar</h2>
-      <ul>
+      <h2 >sidebar</h2>
+      <ul v-if="isLoggedIn">
         
         <li> <a href="/dashboard"><i class="fas fa-home"></i>Dashboard</a></li>
         <!-- <li> <a href="#"><i class="fas fa-user"></i>Vehicles</a></li> -->
@@ -14,6 +14,9 @@
         <!-- <li> <a href="#"><i class="fas fa-address-book"></i>Admins</a></li> -->
         <li> <a href="/payments"><i class="fas fa-map-pin"></i>Payments</a></li>
         <!-- <li> <a href="/dashboard"><i class="fas fa-map-pin"></i>Expenses</a></li> -->
+      </ul>
+      <ul v-else>
+
       </ul>
     </div>
     <div class="main_content">
@@ -65,7 +68,7 @@ export default {
       localStorage.removeItem('token') // clear your user's token from localstorage
       localStorage.removeItem('user') // clear your user from localstorage
 
-      this.$router.push('/login')
+      this.$router.push('/')
 
     }
   },

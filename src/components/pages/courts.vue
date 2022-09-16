@@ -1,6 +1,9 @@
-<template>
+<template >
     <the-headersider></the-headersider>
-<table class="table table-striped table-bordered">
+    <div v-if="isLoggedIn">
+        
+    
+<table  class="table table-striped table-bordered">
         <thead>
             <tr >
                 <th><h3>Name</h3></th>
@@ -18,7 +21,11 @@
             </tbody>
     </table>
     <router-link to="/register/court">register new Court</router-link>
+</div>
+<div v-else>
+    <h2>Kindly login to access this page</h2>
 
+</div>
 
 </template>
 <script>
@@ -29,9 +36,13 @@ export default {
     computed: {
         courts() {
             return  this.$store.getters.allCourts
+            
 
             
-        }
+        },
+        isLoggedIn() {
+      return this.$store.getters.isLoggedIn;
+    },
 
     },
      created() {

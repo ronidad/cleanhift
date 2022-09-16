@@ -64,8 +64,11 @@
             <li class="nav-item">
               <a href="#testimonial" class="nav-link">testimonial</a>
             </li>
-            <li class="nav-item">
-              <a href="dashboard" class="nav-link">Admin</a>
+            <li v-if="isLoggedIn" class="nav-item">
+              <a href="dashboard" class="nav-link">Dashboard</a>
+            </li>
+            <li v-else class="nav-item">
+              <a href="/login" class="nav-link">Login</a>
             </li>
           </ul>
         </div>
@@ -84,13 +87,44 @@
        
 
        
-            <button class="btn-white"> <a href="dashboard" type="button" >Admin</a>
+            <button v-if="isLoggedIn" class="btn-white"> <a href="/dashboard" type="button" >Dashboard</a>
+              </button>
+              <button v-else class="btn-white"> <a href="/login" type="button" >Admin</a>
               </button>
       </div>
     </div>
 <!-- </div> -->
   </header>
 </template>
+<script>
+export default {
+    computed: {
+       isLoggedIn() {
+         return this.$store.getters.isLoggedIn;
+       },
+     },
+   
+     methods:{
+       handleLogout() {
+         this.$store.dispatch('clearToken')
+         localStorage.removeItem('token') // clear your user's token from localstorage
+         localStorage.removeItem('user') // clear your user from localstorage
+   
+         this.$router.push('/login')
+   
+       }
+     },
+     data(){
+             return {
+                  user: ""
+             }
+        },
+        mounted(){
+             let user = localStorage.getItem('user')
+             this.user = JSON.parse(user)
+        },
+   }
+   </script>
 
 <style scoped>
 :root {
