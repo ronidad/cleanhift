@@ -77,7 +77,7 @@
     <!-- <div class="bodies"> -->
 
     <div class="hero-div center container">
-      <h1>we collect litter in your compound</h1>
+      <h1>we collect garbage in your compound</h1>
       <p class="animate__animated animate__fadeInUp animate__slow">
         Give us the work to clean your compound. We collect weekly on saturdays
         throught the courts using our trucks as you pay your monthly bill of 400 per family. Engage us through <strong>0721725955</strong> 
@@ -195,7 +195,7 @@ h6 {
 
 /* Headers */
 .header {
-  background-image: linear-gradient(rgba(134, 197, 206, 0.8), rgba(185, 85, 85, 0.7)), url(/assets/header-bg.jpg);
+  background-image: linear-gradient(rgba(16, 19, 16, 0.8), rgba(100, 110, 104, 0.7)), url(../../assets/garbage.jpg);
   min-height: 100vh;
   background-position: center;
   background-size: cover;

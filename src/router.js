@@ -38,7 +38,7 @@ const router = createRouter({
     },
     { path: "/clients", component: Clients, meta: { auth: true } },
     { path: "/register/court", component: RegisterCourt, meta: { auth: true } },
-    { path: "/courts", component: Courts },
+    { path: "/courts", component: Courts, meta: { auth: true }  },
     {
       path: "/receive/payment",
       component: ReceivePayment,
