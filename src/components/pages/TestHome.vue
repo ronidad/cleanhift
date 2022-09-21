@@ -159,7 +159,7 @@ h6 {
 
 /* Headers */
 .header {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(/assets/header-bg.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url(../../assets/garbage.jpg);
   min-height: 100vh;
   background-position: center;
   background-size: cover;

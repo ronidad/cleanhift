@@ -55,17 +55,18 @@
             <li class="nav-item">
               <a href="#feature" class="nav-link">feature</a>
             </li>
-            <li class="nav-item">
-              <a href="#team" class="nav-link">team</a>
-            </li>
+            
             <li class="nav-item">
               <a href="#pricing" class="nav-link">pricing</a>
             </li>
             <li class="nav-item">
               <a href="#testimonial" class="nav-link">testimonial</a>
             </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact Us</a>
+            </li>
             <li v-if="isLoggedIn" class="nav-item">
-              <a href="dashboard" class="nav-link">Dashboard</a>
+              <a href="/dashboard" class="nav-link">Dashboard</a>
             </li>
             <li v-else class="nav-item">
               <a href="/login" class="nav-link">Login</a>
@@ -95,6 +96,179 @@
     </div>
 <!-- </div> -->
   </header>
+  <!-- end of header  -->
+  <div class="allignLeft">
+
+
+<!-- features section -->
+<section class = "feature" id = "feature">
+      <div class = "container">
+        <div class = "row">
+          <div class = "feature-left wow animate__animated animate__fadeInUp animate__slow">
+            <img src = "../../assets/tako.jpg" alt = "tako image">
+          </div>
+          <div class = "feature-right wow animate__animated animate__fadeInUp animate__slow">
+            <div class = "title">
+              <h2>This is what we offer</h2>
+              <p class = "text">We have an intergrated system that helps us manage garbage collection within your estate</p>
+            </div>
+
+            <div class = "feature-item">
+              <span><i class = "fas fa-tablet-alt"></i></span>
+              <div>
+                <h3>weekly collections</h3>
+                <p class = "text">            We collect weekly on saturdays to ensure  your compound is clean. This helps you arrange the gabbage and leave to us at the gate
+</p>
+              </div>
+            </div>
+
+            <div class = "feature-item">
+              <span><i class = "fas fa-clone"></i></span>
+              <div>
+                <h3>MPesa payments</h3>
+                <p class = "text">Pay our bills through mpesa and get your bills updates instantly. We have intergrated our paybill to match your payments with the account we regisred you.</p>
+              </div>
+            </div>
+            <div class = "feature-item">
+              <span><i class = "fas fa-clone"></i></span>
+              <div>
+                <h3>SMS updates</h3>
+                <p class = "text">We send sms remiders to our customer to ensure they know our schedule and communicate any changes to our collections schedule. Stay up to date with our 24/7 alerts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of features section -->
+     <!-- pricing section -->
+     <section class = "pricing" id = "pricing">
+      <div class = "container">
+        <!-- <div class = "title">
+          <h2 class = "wow animate__animated animate__bounceIn animate__slow">Our Package</h2>
+          <p class = "text">Lorem ipsum dolor sit amet consectetur</p>
+        </div> -->
+
+        <div class = "row wow animate__animated animate__fadeInUp animate__slow">
+          <div class = "pricing-item">
+            <h2>Weekely collections</h2>
+            <div class = "price">
+              <span>Kshs 400 </span>
+              <span class = "text">Monthly</span>
+            </div>
+            <ul>
+              <li>We provide paper bags for you to store your garbage</li>
+              <li>We pick the garbage from your gate</li>
+              <li>Pay after services have been offered</li>
+              <li>Pay using mpesa and get alerts</li>
+              <li>Payments updated automaticallya nd statement sent as text message</li>
+              <li>Reliable and efficient Service</li>
+            </ul>
+          </div>
+
+          
+
+          
+        </div>
+      </div>
+    </section>
+    <!-- end of pricing section -->
+
+    <!-- testimonial section -->
+    <section class = "testimonial" id = "testimonial">
+      <div class = "container">
+        <div class = "title">
+          <h2 class = "wow animate__animated animate__bounceIn animate__slow">Testimonials Words</h2>
+          <p class = "text">Lorem ipsum dolor sit amet consectetur</p>
+        </div>
+
+        <div class = "row owl-carousel owl-theme wow animate__animated animate__fadeInUp animate__slow">
+          <div class = "testimonial-item">
+            <div class = "testimonial-img">
+              <img src = "assets/test-1.jpg" alt = "">
+            </div>
+            <p>Since I engaged cleanshift we have controlled dogs that ised to come for remains</p>
+            <span>Ronnie</span>
+          </div>
+
+          <div class = "testimonial-item">
+            <div class = "testimonial-img">
+              <img src = "assets/test-2.jpg" alt = "">
+            </div>
+            <p>The entire court is clean thanks to cleanshift. I encourage all members to ensure they clean their compounds</p>
+            <span>Evans</span>
+          </div>
+
+          <div class = "testimonial-item">
+            <div class = "testimonial-img">
+              <img src = "assets/test-3.jpg" alt = "">
+            </div>
+            <p>They are relatively cheaper than the ones we wre using before moving here. Professional and timely services. I recommend</p>
+            <span>Jane</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of testimonial section -->
+
+    <!-- contact section -->
+    <section class = "contact" id = "contact">
+      <div class = "container">
+        <div class = "title">
+          <h2 class = "wow animate__animated animate__bounceIn animate__slow">Contact Us</h2>
+          
+        </div>
+
+        <div class = "row wow animate__animated animate__fadeInUp animate__slow">
+          
+
+          <div class = "contact-right">
+            <div>
+              <h2>Visit us</h2>
+              <p class = "text">Tulivu court, off shanglia road next to SSmeta road</p>
+            </div>
+            <div>
+              <h2>Call Us</h2>
+              <p class = "text">0721725955</p>
+            </div>
+            <div>
+              <h2>Send Email</h2>
+              <p class = "text">cleanshift@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of contact section -->
+
+    <!-- footer -->
+    <!-- <footer class = "footer center">
+      <div class = "container">
+        <p class = "text">Copyright &copy; clean shift ventures | All Rights Reserved</p>
+        <div class = "footer-links">
+          <a href = "#" class = "center">
+            <i class = "fab fa-facebook-f"></i>
+          </a>
+          <a href = "#" class = "center">
+            <i class = "fab fa-instagram"></i>
+          </a>
+          <a href = "#" class = "center">
+            <i class = "fab fa-linkedin"></i>
+          </a>
+          <a href = "#" class = "center">
+            <i class = "fab fa-twitter"></i>
+          </a>
+          <a href = "#" class = "center">
+            <i class = "fab fa-pinterest"></i>
+          </a>
+        </div>
+      </div>
+    </footer> -->
+    <!-- end of footer -->
+
+
+
+  </div>
 </template>
 <script>
 export default {
@@ -154,6 +328,9 @@ html {
   margin-top: 150px;
   position: fixed;
   background: transparent;
+}
+.allignLeft {
+  margin-left: -200px !important;
 }
 img {
   width: 100%;
@@ -295,7 +472,87 @@ h6 {
   color: #fff;
 }
 
+/* detail */
+.detail{
+    background: var(--white-smoke);
+}
+.detail-item{
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    -moz-box-shadow: 0 1px 2px 0 rgba(90, 91, 95, 0.1);
+    margin: 2rem 0;
+    padding: 3.5rem 1.5rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+.detail-item:hover{
+    -webkit-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    -moz-box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    box-shadow: 0 21px 19px -2px rgba(217, 217, 217, 1);
+    transform: translateY(-5px);
+}
+.detail-item span{
+    font-size: 2.5rem;
+}
+.detail-item h2{
+    font-size: 1.4rem;
+    opacity: 0.8;
+    font-weight: 300;
+}
+.line{
+    width: 45px;
+    margin: 1.2rem auto;
+    background: var(--mount-meadow);
+    height: 2.5px;
+}
+
+/* feature */
+.feature .title{
+    text-align: left;
+}
+.feature-left img{
+    width: 80%;
+    margin: 0 auto;
+}
+.feature-right{
+    margin-top: 4rem;
+}
+.feature-item{
+    margin: 1.4rem 0;
+    display: flex;
+}
+.feature-item div h3{
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.85;
+}
+.feature-item span{
+    font-size: 1.1rem;
+    color: #fff;
+    background: var(--mount-meadow);
+    align-self: flex-start;
+    padding: 0.4rem 0.7rem;
+    border-radius: 2px;
+    margin-right: 1.4rem;
+}
+
+
+@media screen and (min-width: 768px) {
+  .detail .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
 @media screen and (min-width: 992px) {
+  .detail .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
   .navbar {
     background: transparent;
     margin-top: 1.4rem;
@@ -346,5 +603,176 @@ h6 {
   .navbar .nav-link {
     color: var(--night-rider);
   }
+  .feature .row{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem;
+    }
+    .feature-right{
+        margin-top: 0;
+    }
+    .video p{
+        width: 60%;
+    }
 }
+/* pricing */
+.pricing .row{
+    margin-top: 2rem;
+}
+.pricing-item{
+    border: 2.5px solid #f9f9f9;
+    text-align: center;
+    padding: 3.4rem 0;
+    margin: 2rem 0;
+}
+.pricing-item h2{
+    color: var(--night-rider);
+    opacity: 0.7;
+    font-size: 1.5rem;
+}
+.pricing-item .price{
+    padding: 1.5rem 0 1rem 0;
+    line-height: 1.1;
+}
+.pricing-item .price span{
+    display: block;
+}
+.pricing-item .price span:first-child{
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    color: var(--mount-meadow);
+}
+.pricing-item .price span:last-child{
+    font-size: 0.85rem;
+    letter-spacing: 1;
+    font-weight: 500;
+}
+.pricing-item ul li{
+    padding: 0.8rem 0;
+    opacity: 0.7;
+}
+
+/* testimonial */
+.testimonial{
+    background-image: linear-gradient(rgba(27, 188, 156, 0.8), rgba(27, 188, 156, 0.9)), url(../../assets/tako.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.testimonial .title h2,
+.testimonial .title{
+    color: #fff;
+}
+.testimonial .row{
+    margin-top: 2rem;
+}
+.testimonial-img{
+    border: 4px solid #fff;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 2.5rem auto;
+    padding: 0.5rem;
+}
+.testimonial-img img{
+    border-radius: 50%;
+}
+.testimonial-item{
+    text-align: center;
+}
+.testimonial-item p{
+    font-size: 1.3rem;
+    color: var(--white-smoke);
+    line-height: 1.7;
+}
+.testimonial-item span{
+    margin-top: 0.7rem;
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* contact */
+.contact .row{
+    margin-top: 2rem;
+}
+.contact .row > div{
+    margin: 2rem 0;
+    padding: 1rem 0;
+}
+.contact .row > div h2{
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: 0.9;
+}
+.contact-left form input,
+.contact-left form textarea{
+    width: 100%;
+    font-size: 1.1rem;
+    margin: 0.2rem 0;
+    padding: 0.8rem 0.6rem;
+    border: none;
+    border-bottom: 1.5px solid #f0f0f0;
+    outline: 0;
+}
+.contact-left form input::placeholder,
+.contact-left form textarea::placeholder{
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+.contact-left form input:focus,
+.contact-left form textarea:focus{
+    border-color: var(--night-rider);
+}
+.submit-btn{
+    margin: 1rem 0;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff;
+    background: var(--mount-meadow);
+    opacity: 0.9;
+    padding: 0.8rem 3.4rem;
+    border-radius: 2rem;
+    transition: var(--transition);
+}
+.submit-btn:hover{
+    background: var(--black);
+}
+.contact-right div{
+    margin: 2rem 0;
+}
+
+/* footer */
+.footer{
+    text-align: center;
+    background: var(--black);
+    color: var(--white-smoke);
+    padding: 2rem 0;
+    height: 50vh;
+}
+.footer .text{
+    opacity: 0.8;
+}
+.footer-links{
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+}
+.footer-links a{
+    color: var(--white-smoke);
+    opacity: 0.8;
+    width: 50px;
+    height: 50px;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+.footer-links a:hover{
+    background: var(--mount-meadow);
+}
+
 </style>
